@@ -1,0 +1,19 @@
+---
+title: "Student Academic Performance Report"
+author: "Data Analyst"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## 1. Executive Summary
+This report analyzes student assessment metrics, examining the distribution of midterm and final scores, and evaluating overall academic standing using automated data pipelines.
+
+## 2. Methodology & Metrics
+- **Weighted Grading:** Final grades are computed using a weighted formula (40% Midterm + 60% Final).
+- **Performance Threshold:** Students scoring a composite score of 60 or higher are categorized as "Passed".
+
+## 3. Visual Performance Dashboard
+The exploratory data analysis dashboard below illustrates score distributions and cohort correlations:
+
+```{r, echo=FALSE, fig.width=8, fig.height=8, warning=FALSE, message=FALSE}
+source("analysis_pipeline.R", local = TRUE)
